@@ -1,121 +1,125 @@
-const yesButton = document.getElementById("yesButton");
-const noButton = document.getElementById("noButton");
-
-const response = document.getElementById("response");
-const counter = document.getElementById("counter");
-
 let fugas = 0;
 
 const mensagens = [
     "Tem certeza? 👀",
     "Pensa com carinho... ❤️",
-    "Presidente Figueiredo está esperando 😂",
-    "Uma cachoeira pode mudar sua decisão... 🌊",
-    "Essa foi a penúltima tentativa de fuga 😌",
-    "Tá bom, agora eu paro de fugir 😂"
+    "Presidente Figueiredo parece uma boa ideia 😂",
+    "Uma cachoeira pode mudar sua decisão... 🌿💦",
+    "Mais uma tentativa? 😌",
+    "Última fuga. Prometo 😂"
 ];
 
-noButton.addEventListener("click", function () {
+function mostrarTela(numero) {
+
+    document.querySelectorAll(".card").forEach(card => {
+        card.classList.add("hidden");
+    });
+
+    document
+        .getElementById("tela" + numero)
+        .classList.remove("hidden");
+}
+
+
+// ===============================
+// BOTÃO SIM
+// ===============================
+
+document.getElementById("sim").addEventListener("click", function () {
+
+    document.querySelectorAll(".card").forEach(card => {
+        card.classList.add("hidden");
+    });
+
+    document
+        .getElementById("telaSim")
+        .classList.remove("hidden");
 
     /*
-     * Depois de 6 fugas,
-     * o botão passa a funcionar normalmente.
+     * COLOQUE SEU NÚMERO AQUI
+     *
+     * Formato:
+     * 55 + DDD + número
+     *
+     * Exemplo:
+     * 5592999999999
+     */
+
+    const numeroWhatsApp = "5592984738483";
+
+    const mensagem =
+        "Oi! Eu aceito ir para Presidente Figueiredo com você ❤️ Agora vamos escolher o dia? 😌";
+
+    const link =
+        "https://wa.me/" +
+        numeroWhatsApp +
+        "?text=" +
+        encodeURIComponent(mensagem);
+
+    document
+        .getElementById("whatsapp")
+        .href = link;
+
+});
+
+
+// ===============================
+// BOTÃO NÃO
+// ===============================
+
+document.getElementById("nao").addEventListener("click", function () {
+
+    /*
+     * Se já fugiu 6 vezes,
+     * o botão deixa de fugir.
      */
 
     if (fugas >= 6) {
 
-        response.classList.remove("hidden");
+        document.querySelectorAll(".card").forEach(card => {
+            card.classList.add("hidden");
+        });
 
-        response.innerHTML = `
-            <h3>Tudo bem 😊</h3>
-
-            <p>
-                Sem problema, Gabriela.
-                Obrigado por responder ❤️
-            </p>
-        `;
-
-        noButton.style.position = "relative";
-
-        counter.textContent = "";
+        document
+            .getElementById("telaNao")
+            .classList.remove("hidden");
 
         return;
     }
 
     fugas++;
 
-    counter.textContent =
+    const mensagem =
+        document.getElementById("mensagem");
+
+    mensagem.textContent =
         mensagens[fugas - 1];
 
+
     /*
-     * Faz o botão mudar de posição.
+     * Faz o botão fugir.
      */
 
-    const maxX = 120;
-    const maxY = 40;
-
     const x =
-        Math.floor(
-            Math.random() * (maxX * 2 + 1)
-        ) - maxX;
+        Math.floor(Math.random() * 160) - 80;
 
     const y =
-        Math.floor(
-            Math.random() * (maxY * 2 + 1)
-        ) - maxY;
+        Math.floor(Math.random() * 80) - 40;
 
-    noButton.style.transform =
+    this.style.transform =
         `translate(${x}px, ${y}px)`;
+
 
     /*
      * Na sexta fuga,
-     * avisamos que acabou a brincadeira.
+     * avisa que acabou a brincadeira.
      */
 
     if (fugas === 6) {
 
-        counter.textContent =
-            "Última fuga. Depois disso você pode clicar normalmente 😌";
+        mensagem.textContent =
+            "Última fuga 😌 Depois disso você pode escolher normalmente.";
+
     }
-});
 
-
-/*
- * BOTÃO SIM
- */
-
-yesButton.addEventListener("click", function () {
-
-    response.classList.remove("hidden");
-
-    response.innerHTML = `
-        <h3>Então temos um passeio! ❤️</h3>
-
-        <p>
-            Eu gostei dessa resposta. 😌
-        </p>
-
-        <p>
-            Agora só precisamos combinar
-            o melhor dia para irmos para
-            <strong>Presidente Figueiredo</strong>. 🌿💦
-        </p>
-
-        <a
-            class="whatsapp"
-            href="https://wa.me/5592984738483?text=Oi!%20Eu%20aceito%20ir%20para%20Presidente%20Figueiredo%20com%20voc%C3%AA%20%F0%9F%98%8A%E2%9D%A4%EF%B8%8F"
-            target="_blank"
-        >
-            Confirmar pelo WhatsApp 💬
-        </a>
-    `;
-
-    /*
-     * Esconde os botões depois do SIM.
-     */
-
-    yesButton.style.display = "none";
-    noButton.style.display = "none";
-
-    counter.textContent = "";
 });
