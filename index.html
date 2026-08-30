@@ -12,298 +12,484 @@
 
 <body>
 
-    <main class="container">
+<main class="container">
 
-        <!-- TELA 1 -->
-        <section id="tela1" class="card">
+    <!-- ========================= -->
+    <!-- TELA 1 - ABERTURA -->
+    <!-- ========================= -->
 
-            <div class="emoji">💌</div>
+    <section id="tela1" class="card">
 
-            <p class="small-title">CONVITE ESPECIAL</p>
+        <div class="emoji">💌</div>
 
-            <h1>Gabriela...</h1>
+        <span class="small-title">CONVITE ESPECIAL</span>
 
-            <p>
-                Você recebeu uma proposta
-                um pouquinho diferente. 👀
-            </p>
+        <h1>Gabriela...</h1>
 
-            <button class="primary" onclick="mostrarTela(2)">
-                Abrir convite 💌
-            </button>
+        <p>
+            Você recebeu uma proposta
+            um pouquinho diferente. 👀
+        </p>
 
-        </section>
+        <button class="primary" onclick="mostrarTela('tela2')">
+            Abrir convite 💌
+        </button>
+
+    </section>
 
 
-        <!-- TELA 2 -->
-        <section id="tela2" class="card hidden">
+    <!-- ========================= -->
+    <!-- TELA 2 - VAGA -->
+    <!-- ========================= -->
 
-            <div class="emoji">📋</div>
+    <section id="tela2" class="card hidden">
 
-            <p class="small-title">PROCESSO SELETIVO</p>
+        <div class="emoji">📋</div>
 
-            <h1>Vaga disponível</h1>
+        <span class="small-title">PROCESSO SELETIVO</span>
 
-            <div class="vaga">
+        <h1>Vaga disponível</h1>
 
-                <div class="linha">
-                    <span>Cargo</span>
-                    <strong>Namorado ❤️</strong>
-                </div>
+        <div class="vaga">
 
-                <div class="linha">
-                    <span>Candidato</span>
-                    <strong>Walter</strong>
-                </div>
-
-                <div class="linha">
-                    <span>Experiência</span>
-                    <strong>Vários encontros</strong>
-                </div>
-
+            <div class="linha">
+                <span>Cargo</span>
+                <strong>Namorada ❤️</strong>
             </div>
 
-            <p>
-                Antes de tomar sua decisão,
-                acho justo você conhecer um pouco
-                melhor o candidato.
-            </p>
-
-            <button class="primary" onclick="mostrarTela(3)">
-                Conhecer o candidato 👀
-            </button>
-
-        </section>
-
-
-        <!-- TELA 3 -->
-        <section id="tela3" class="card hidden">
-
-            <div class="emoji">❤️</div>
-
-            <p class="small-title">SOBRE O CANDIDATO</p>
-
-            <h1>O que você encontra em mim</h1>
-
-            <div class="qualidades">
-
-                <div class="qualidade">
-                    <span>❤️</span>
-                    <div>
-                        <strong>Carinho</strong>
-                        <p>
-                            Gosto de demonstrar o que sinto
-                            através de atitudes.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="qualidade">
-                    <span>🤝</span>
-                    <div>
-                        <strong>Companheirismo</strong>
-                        <p>
-                            Gosto de estar presente e dividir
-                            os momentos.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="qualidade">
-                    <span>🔐</span>
-                    <div>
-                        <strong>Lealdade</strong>
-                        <p>
-                            Quando alguém é importante para mim,
-                            eu levo a sério.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="qualidade">
-                    <span>👂</span>
-                    <div>
-                        <strong>Escuta</strong>
-                        <p>
-                            Talvez eu não fale tanto,
-                            mas presto atenção no que você diz.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="qualidade">
-                    <span>🧳</span>
-                    <div>
-                        <strong>Aventura</strong>
-                        <p>
-                            Gosto de viajar, conhecer lugares
-                            e viver experiências novas.
-                        </p>
-                    </div>
-                </div>
-
+            <div class="linha">
+                <span>Candidato</span>
+                <strong>Walter</strong>
             </div>
 
-            <button class="primary" onclick="mostrarTela(4)">
-                Tem mais uma coisa... ❤️
-            </button>
-
-        </section>
-
-
-        <!-- TELA 4 -->
-        <section id="tela4" class="card hidden">
-
-            <div class="emoji">🫶</div>
-
-            <p class="small-title">SINCERIDADE</p>
-
-            <h1>Não sou perfeito</h1>
-
-            <p>
-                Sei que preciso melhorar em algumas coisas.
-            </p>
-
-            <div class="melhoria">
-
-                <p>
-                    Principalmente em <strong>conversar mais,
-                    perguntar mais sobre você</strong> e também
-                    deixar você conhecer mais de mim.
-                </p>
-
+            <div class="linha">
+                <span>Experiência</span>
+                <strong>Vários encontros</strong>
             </div>
 
+        </div>
+
+        <p>
+            Antes de tomar sua decisão,
+            acho justo você conhecer
+            um pouco melhor o candidato.
+        </p>
+
+        <button class="primary" onclick="mostrarTela('tela3')">
+            Conhecer o candidato 👀
+        </button>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- TELA 3 - QUALIDADES -->
+    <!-- ========================= -->
+
+    <section id="tela3" class="card hidden">
+
+        <div class="emoji">❤️</div>
+
+        <span class="small-title">SOBRE O CANDIDATO</span>
+
+        <h1>O que você encontra em mim</h1>
+
+        <div class="qualidades">
+
+            <div class="qualidade">
+                <span>❤️</span>
+
+                <div>
+                    <strong>Carinho</strong>
+
+                    <p>
+                        Gosto de demonstrar o que
+                        sinto através de atitudes.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="qualidade">
+                <span>🤝</span>
+
+                <div>
+                    <strong>Companheirismo</strong>
+
+                    <p>
+                        Gosto de estar presente e
+                        dividir os momentos.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="qualidade">
+                <span>🔐</span>
+
+                <div>
+                    <strong>Lealdade</strong>
+
+                    <p>
+                        Quando alguém é importante
+                        para mim, eu levo a sério.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="qualidade">
+                <span>👂</span>
+
+                <div>
+                    <strong>Escuta</strong>
+
+                    <p>
+                        Talvez eu não fale tanto,
+                        mas presto atenção no que você diz.
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="qualidade">
+                <span>🧳</span>
+
+                <div>
+                    <strong>Aventura</strong>
+
+                    <p>
+                        Gosto de viajar, conhecer lugares
+                        e viver experiências novas.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <button class="primary" onclick="mostrarTela('tela4')">
+            Tem mais uma coisa... ❤️
+        </button>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- TELA 4 - SINCERIDADE -->
+    <!-- ========================= -->
+
+    <section id="tela4" class="card hidden">
+
+        <div class="emoji">🫶</div>
+
+        <span class="small-title">SINCERIDADE</span>
+
+        <h1>Não sou perfeito</h1>
+
+        <p>
+            Sei que preciso melhorar
+            em algumas coisas.
+        </p>
+
+        <div class="melhoria">
+
             <p>
-                Mas uma coisa eu posso garantir:
+                Principalmente em
+                <strong>conversar mais,
+                perguntar mais sobre você</strong>
+                e também deixar você
+                conhecer mais de mim.
+            </p>
+
+        </div>
+
+        <p>
+            Mas uma coisa eu posso garantir:
+        </p>
+
+        <h2>
+            Quando alguém é importante para mim,
+            eu quero aprender a fazer melhor. ❤️
+        </h2>
+
+        <button class="primary" onclick="mostrarTela('tela5')">
+            Tem mais uma coisa ❤️
+        </button>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- TELA 5 - O QUE SINTO -->
+    <!-- ========================= -->
+
+    <section id="tela5" class="card hidden">
+
+        <div class="emoji">❤️</div>
+
+        <span class="small-title">UMA COISA QUE VOCÊ PRECISA SABER</span>
+
+        <h1>Eu gosto de você.</h1>
+
+        <p>
+            Gosto da sua personalidade forte,
+            do seu jeito e, principalmente,
+            da sua companhia.
+        </p>
+
+        <p>
+            Desde a primeira vez que saímos,
+            eu gostei muito de estar com você.
+        </p>
+
+        <p>
+            E, a cada vez que a gente se encontra,
+            parece que isso aumenta um pouco mais.
+        </p>
+
+        <p>
+            É engraçado porque, toda vez que
+            te deixo em casa, depois de um tempo
+            eu já sinto saudades.
+        </p>
+
+        <div class="frase">
+
+            <p>
+                E mesmo nós dois não sendo muito
+                de contato físico, eu gosto de ficar
+                pertinho de você.
+            </p>
+
+            <p>
+                Gosto de estar colado, sentir sua
+                presença e simplesmente aproveitar
+                aquele momento.
+            </p>
+
+        </div>
+
+        <p>
+            Talvez eu não consiga falar tudo isso
+            pessoalmente como deveria...
+        </p>
+
+        <h2>
+            Mas eu queria que você soubesse. ❤️
+        </h2>
+
+        <button class="primary" onclick="mostrarTela('tela6')">
+            Avaliação final 📋
+        </button>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- TELA 6 - DECISÃO -->
+    <!-- ========================= -->
+
+    <section id="tela6" class="card hidden">
+
+        <div class="emoji">📋</div>
+
+        <span class="small-title">AVALIAÇÃO FINAL</span>
+
+        <h1>Chegou a hora da decisão.</h1>
+
+        <p>
+            Agora que você já conhece
+            um pouco melhor o candidato...
+        </p>
+
+        <p>
+            Você deseja avançar com a candidatura?
+        </p>
+
+
+        <div class="decisao">
+
+            <button
+                id="contratar"
+                class="contratar">
+
+                Contratar ❤️
+
+            </button>
+
+
+            <button
+                id="avaliar"
+                class="avaliar">
+
+                Avaliar currículo 📄
+
+            </button>
+
+        </div>
+
+        <p id="mensagemDecisao"></p>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- TELA 7 - CURRÍCULO -->
+    <!-- ========================= -->
+
+    <section id="tela7" class="card hidden">
+
+        <div class="emoji">📄</div>
+
+        <span class="small-title">AVALIAÇÃO DO CANDIDATO</span>
+
+        <h1>Currículo</h1>
+
+
+        <div class="avaliacoes">
+
+            <div class="avaliacao">
+                <span>Carinho</span>
+                <strong>⭐⭐⭐⭐⭐</strong>
+            </div>
+
+            <div class="avaliacao">
+                <span>Companheirismo</span>
+                <strong>⭐⭐⭐⭐⭐</strong>
+            </div>
+
+            <div class="avaliacao">
+                <span>Lealdade</span>
+                <strong>⭐⭐⭐⭐⭐</strong>
+            </div>
+
+            <div class="avaliacao">
+                <span>Escuta</span>
+                <strong>⭐⭐⭐⭐⭐</strong>
+            </div>
+
+            <div class="avaliacao">
+                <span>Iniciativa</span>
+                <strong>⭐⭐⭐⭐</strong>
+            </div>
+
+            <div class="avaliacao">
+                <span>Comunicação</span>
+                <strong>⭐⭐⭐</strong>
+            </div>
+
+        </div>
+
+
+        <div class="observacao">
+
+            <strong>Observação do RH:</strong>
+
+            <p>
+                O candidato reconhece que precisa
+                perguntar mais sobre você.
+            </p>
+
+            <p>
+                Está disposto a melhorar
+                e conhecer você cada vez mais. ❤️
+            </p>
+
+        </div>
+
+
+        <div class="consideracoes">
+
+            <h3>Considerações finais</h3>
+
+            <p>
+                Não sou perfeito e ainda tenho
+                coisas para melhorar.
+            </p>
+
+            <p>
+                Mas quando alguém é importante
+                para mim, eu quero conhecer essa
+                pessoa cada vez mais, estar presente
+                e fazer melhor.
             </p>
 
             <h2>
-                Quando alguém é importante para mim,
-                eu quero aprender a fazer melhor. ❤️
+                E você se tornou alguém
+                muito importante para mim. ❤️
             </h2>
 
-            <button class="primary" onclick="mostrarTela(5)">
-                Próxima etapa 🌿
-            </button>
-
-        </section>
+        </div>
 
 
-        <!-- TELA 5 -->
-        <section id="tela5" class="card hidden">
+        <button
+            class="primary"
+            onclick="mostrarTela('tela6')">
 
-            <div class="emoji">🌿</div>
+            Voltar para decisão ❤️
 
-            <p class="small-title">PRÓXIMA ETAPA</p>
+        </button>
 
-            <h1>Tenho uma proposta...</h1>
-
-            <h2>Presidente Figueiredo 💦</h2>
-
-            <p>
-                Um dia juntos, com natureza,
-                cachoeira, comida boa e bastante
-                tempo para conversar.
-            </p>
-
-            <p class="destaque">
-                E talvez descobrir se essa candidatura
-                merece avançar para a próxima fase. ❤️
-            </p>
-
-            <h3>
-                E então, Gabriela...
-            </h3>
-
-            <p>
-                Você aceita esse convite?
-            </p>
-
-            <div class="buttons">
-
-                <button id="sim" class="yes">
-                    Sim ❤️
-                </button>
-
-                <button id="nao" class="no">
-                    Não 🙈
-                </button>
-
-            </div>
-
-            <p id="mensagem" class="mensagem"></p>
-
-        </section>
+    </section>
 
 
-        <!-- TELA SIM -->
+    <!-- ========================= -->
+    <!-- TELA 8 - CONTRATADO -->
+    <!-- ========================= -->
 
-        <section id="telaSim" class="card hidden">
+    <section id="telaContratado" class="card hidden">
 
-            <div class="emoji">🥰</div>
+        <div class="emoji">🥰</div>
 
-            <p class="small-title">RESULTADO</p>
+        <span class="small-title">RESULTADO</span>
 
-            <h1>Candidatura aprovada!</h1>
+        <h1>
+            Candidatura aprovada!
+        </h1>
+
+        <p>
+            Parece que temos um acordo,
+            Gabriela. ❤️
+        </p>
+
+
+        <div class="contrato">
 
             <p>
-                Parece que temos um acordo,
-                Gabriela. ❤️
-            </p>
-
-            <div class="resumo">
-
-                <p>📍 Presidente Figueiredo</p>
-                <p>🌿 Natureza</p>
-                <p>💦 Cachoeira</p>
-                <p>🍽️ Comida boa</p>
-                <p>❤️ Boa companhia</p>
-
-            </div>
-
-            <p>
-                Agora só falta escolher o dia. 😌
-            </p>
-
-            <a
-                id="whatsapp"
-                class="whatsapp"
-                target="_blank">
-
-                Confirmar pelo WhatsApp 💬
-
-            </a>
-
-        </section>
-
-
-        <!-- TELA NÃO -->
-
-        <section id="telaNao" class="card hidden">
-
-            <div class="emoji">😊</div>
-
-            <p class="small-title">RESULTADO</p>
-
-            <h1>Tudo bem, Gabriela.</h1>
-
-            <p>
-                Obrigado por considerar
-                minha proposta. ❤️
+                <strong>Cargo:</strong>
+                Namorada ❤️
             </p>
 
             <p>
-                E obrigado pelos momentos
-                que já compartilhamos.
+                <strong>Contrato:</strong>
+                Por tempo indeterminado
             </p>
 
-        </section>
+            <p>
+                <strong>Benefícios:</strong>
+                Carinho, companhia, viagens,
+                risadas e muitos momentos juntos.
+            </p>
 
-    </main>
+        </div>
 
 
-    <script src="script.js"></script>
+        <p class="pequena">
+            Início do contrato sujeito à
+            concordância da candidata. 😌
+        </p>
+
+        <div class="final">
+            ❤️
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
 
 </body>
 
