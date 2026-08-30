@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,59 +12,199 @@
 
 <body>
 
-    <div class="hearts"></div>
-
     <main class="container">
 
-        <section class="card">
+        <!-- TELA 1 -->
+        <section id="tela1" class="card">
 
             <div class="emoji">💌</div>
 
             <h1>Gabriela...</h1>
 
-            <p class="subtitle">
-                Tenho um convite especial para você.
+            <p>
+                Você recebeu uma proposta<br>
+                um pouquinho diferente. 👀
             </p>
 
-            <div class="message">
-                <p>
-                    Que tal a gente fazer um passeio diferente?
-                </p>
+            <button class="primary" onclick="mostrarTela(2)">
+                Abrir convite 💌
+            </button>
+
+        </section>
+
+
+        <!-- TELA 2 -->
+        <section id="tela2" class="card hidden">
+
+            <div class="emoji">📋</div>
+
+            <h1>Vaga disponível</h1>
+
+            <div class="vaga">
+
+                <p><strong>Cargo:</strong> Namorada ❤️</p>
+
+                <p><strong>Candidato:</strong> Walter</p>
+
+                <hr>
+
+                <p>❤️ Carinho</p>
+                <p>🤝 Companheirismo</p>
+                <p>😂 Bom humor</p>
+                <p>🫶 Atenção</p>
+                <p>🧳 Gostar de passeios</p>
+
+                <hr>
 
                 <p>
-                    Pensei em irmos juntos para
-                    <strong>Presidente Figueiredo</strong> 🌿💦
+                    <strong>Experiência:</strong><br>
+                    Vários encontros realizados com sucesso. ✅
                 </p>
 
-                <p>
-                    Conhecer um lugar bonito, comer alguma coisa,
-                    conversar bastante e simplesmente aproveitar o dia.
-                </p>
-
-                <p class="highlight">
-                    Então eu queria te perguntar...
-                </p>
             </div>
 
-            <h2>
-                Você aceita ir comigo? ❤️
-            </h2>
+            <button class="primary" onclick="mostrarTela(3)">
+                Ver candidatura 👀
+            </button>
+
+        </section>
+
+
+        <!-- TELA 3 -->
+        <section id="tela3" class="card hidden">
+
+            <div class="emoji">❤️</div>
+
+            <h1>Por que me escolher?</h1>
+
+            <p>
+                Sou alguém que gosta de
+                <strong>cuidar, ouvir, estar presente</strong>
+                e criar momentos especiais.
+            </p>
+
+            <p>
+                Gosto de viajar, conhecer lugares novos
+                e compartilhar experiências com alguém especial.
+            </p>
+
+            <div class="observacao">
+
+                <p>
+                    Tenho também um pequeno ponto
+                    a melhorar... 😅
+                </p>
+
+                <p>
+                    Preciso aprender a perguntar mais
+                    sobre você e falar um pouco mais de mim.
+                </p>
+
+                <span>
+                    Mas estou trabalhando nisso. ❤️
+                </span>
+
+            </div>
+
+            <button class="primary" onclick="mostrarTela(4)">
+                Ver proposta 🌿
+            </button>
+
+        </section>
+
+
+        <!-- TELA 4 -->
+        <section id="tela4" class="card hidden">
+
+            <div class="emoji">🌿</div>
+
+            <h1>Tenho uma proposta...</h1>
+
+            <h2>Presidente Figueiredo 💦</h2>
+
+            <p>
+                Um passeio juntos, com natureza,
+                cachoeira, comida boa e conversa.
+            </p>
+
+            <p class="destaque">
+                E, quem sabe, mais uma história
+                para guardar. ❤️
+            </p>
+
+            <h3>
+                O que acha?
+            </h3>
 
             <div class="buttons">
 
-                <button id="yesButton" class="yes">
-                    Sim, vamos! ❤️
+                <button id="sim" class="yes">
+                    Aceito ❤️
                 </button>
 
-                <button id="noButton" class="no">
+                <button id="nao" class="no">
                     Não 🙈
                 </button>
 
             </div>
 
-            <p id="counter" class="counter"></p>
+            <p id="mensagem" class="mensagem"></p>
 
-            <div id="response" class="response hidden"></div>
+        </section>
+
+
+        <!-- RESPOSTA SIM -->
+        <section id="telaSim" class="card hidden">
+
+            <div class="emoji">🥰</div>
+
+            <h1>Candidatura aprovada!</h1>
+
+            <p>
+                Parece que temos um acordo,
+                Gabriela. ❤️
+            </p>
+
+            <div class="resumo">
+
+                <p>📍 Presidente Figueiredo</p>
+                <p>🌿 Natureza</p>
+                <p>💦 Cachoeira</p>
+                <p>🍽️ Comida</p>
+                <p>❤️ Companhia</p>
+
+            </div>
+
+            <p>
+                Agora só falta escolher o dia. 😌
+            </p>
+
+            <a
+                id="whatsapp"
+                class="whatsapp"
+                target="_blank">
+                Confirmar pelo WhatsApp 💬
+            </a>
+
+        </section>
+
+
+        <!-- RESPOSTA NÃO -->
+        <section id="telaNao" class="card hidden">
+
+            <div class="emoji">😊</div>
+
+            <h1>Tudo bem, Gabriela.</h1>
+
+            <p>
+                Obrigado por considerar
+                minha proposta. ❤️
+            </p>
+
+            <p>
+                Foi bom enquanto durou
+                o processo seletivo. 😂
+            </p>
 
         </section>
 
@@ -72,4 +213,5 @@
     <script src="script.js"></script>
 
 </body>
+
 </html>
