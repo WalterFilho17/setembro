@@ -28,7 +28,6 @@ body {
 
 .container {
     width: 100%;
-
     max-width: 500px;
 }
 
@@ -58,6 +57,8 @@ body {
 }
 
 .small-title {
+    display: block;
+
     color: #1e3a5f;
 
     font-size: 12px;
@@ -80,19 +81,19 @@ h1 {
 h2 {
     color: #1e3a5f;
 
-    font-size: 23px;
+    font-size: 22px;
 
     line-height: 1.4;
 
-    margin: 15px 0;
+    margin: 18px 0;
 }
 
 h3 {
-    margin-top: 25px;
+    color: #172554;
 
-    color: #333;
+    font-size: 19px;
 
-    font-size: 20px;
+    margin-bottom: 12px;
 }
 
 p {
@@ -106,14 +107,16 @@ p {
 }
 
 
+/* ========================= */
 /* BOTÕES */
+/* ========================= */
 
 button {
     border: none;
 
     border-radius: 14px;
 
-    padding: 14px 24px;
+    padding: 14px 22px;
 
     font-size: 16px;
 
@@ -127,7 +130,7 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .primary {
@@ -146,14 +149,16 @@ button:hover {
 }
 
 
+/* ========================= */
 /* VAGA */
+/* ========================= */
 
 .vaga {
     background: #f1f5f9;
 
     border-radius: 18px;
 
-    padding: 20px;
+    padding: 18px;
 
     margin: 20px 0;
 
@@ -169,7 +174,7 @@ button:hover {
 
     gap: 15px;
 
-    padding: 10px 0;
+    padding: 11px 0;
 
     border-bottom: 1px solid #dbe2ea;
 }
@@ -193,7 +198,9 @@ button:hover {
 }
 
 
+/* ========================= */
 /* QUALIDADES */
+/* ========================= */
 
 .qualidades {
     text-align: left;
@@ -238,7 +245,9 @@ button:hover {
 }
 
 
-/* PONTO A MELHORAR */
+/* ========================= */
+/* MELHORIA */
+/* ========================= */
 
 .melhoria {
     background: #eef4ff;
@@ -264,62 +273,12 @@ button:hover {
     color: #172554;
 }
 
-.destaque {
-    color: #1e3a5f;
 
-    font-weight: bold;
+/* ========================= */
+/* FRASE */
+/* ========================= */
 
-    margin-top: 20px;
-}
-
-
-/* BOTÕES SIM / NÃO */
-
-.buttons {
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 15px;
-
-    min-height: 70px;
-
-    margin-top: 20px;
-}
-
-.yes {
-    background: #1e3a5f;
-
-    color: white;
-
-    box-shadow:
-        0 6px 15px rgba(30, 58, 95, 0.3);
-}
-
-.no {
-    background: #e5e7eb;
-
-    color: #444;
-
-    position: relative;
-}
-
-.mensagem {
-    min-height: 25px;
-
-    margin-top: 15px;
-
-    color: #1e3a5f;
-
-    font-size: 14px;
-}
-
-
-/* RESULTADO */
-
-.resumo {
+.frase {
     background: #f1f5f9;
 
     border-radius: 18px;
@@ -329,33 +288,182 @@ button:hover {
     margin: 20px 0;
 }
 
-.resumo p {
-    margin-bottom: 7px;
+.frase p {
+    font-size: 16px;
+}
+
+.frase p:last-child {
+    margin-bottom: 0;
 }
 
 
-/* WHATSAPP */
+/* ========================= */
+/* DECISÃO */
+/* ========================= */
 
-.whatsapp {
-    display: inline-block;
+.decisao {
+    display: flex;
 
-    margin-top: 15px;
+    flex-direction: column;
 
-    padding: 14px 22px;
+    gap: 14px;
 
-    border-radius: 14px;
+    margin-top: 25px;
+}
 
-    background: #25D366;
+.contratar {
+    background: #1e3a5f;
 
     color: white;
 
-    text-decoration: none;
+    box-shadow:
+        0 6px 15px rgba(30, 58, 95, 0.3);
+}
 
-    font-weight: bold;
+.avaliar {
+    background: #e8edf3;
+
+    color: #172554;
 }
 
 
+/* ========================= */
+/* AVALIAÇÕES */
+/* ========================= */
+
+.avaliacoes {
+    background: #f8fafc;
+
+    border-radius: 18px;
+
+    padding: 15px;
+
+    margin: 20px 0;
+}
+
+.avaliacao {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 11px 5px;
+
+    border-bottom: 1px solid #dbe2ea;
+}
+
+.avaliacao:last-child {
+    border-bottom: none;
+}
+
+.avaliacao span {
+    color: #555;
+
+    font-size: 15px;
+}
+
+.avaliacao strong {
+    font-size: 14px;
+}
+
+
+/* ========================= */
+/* OBSERVAÇÃO */
+/* ========================= */
+
+.observacao {
+    background: #eef4ff;
+
+    border-left: 4px solid #1e3a5f;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    text-align: left;
+
+    margin-bottom: 20px;
+}
+
+.observacao strong {
+    color: #172554;
+
+    display: block;
+
+    margin-bottom: 8px;
+}
+
+.observacao p {
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.observacao p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ========================= */
+/* CONSIDERAÇÕES */
+/* ========================= */
+
+.consideracoes {
+    margin-top: 20px;
+}
+
+.consideracoes p {
+    font-size: 16px;
+}
+
+
+/* ========================= */
+/* CONTRATO */
+/* ========================= */
+
+.contrato {
+    background: #f1f5f9;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+    text-align: left;
+}
+
+.contrato p {
+    font-size: 16px;
+
+    margin-bottom: 12px;
+}
+
+.contrato p:last-child {
+    margin-bottom: 0;
+}
+
+.contrato strong {
+    color: #172554;
+}
+
+.pequena {
+    font-size: 13px;
+
+    color: #777;
+}
+
+.final {
+    font-size: 40px;
+
+    margin-top: 15px;
+}
+
+
+/* ========================= */
 /* ANIMAÇÃO */
+/* ========================= */
 
 @keyframes aparecer {
 
@@ -373,7 +481,9 @@ button:hover {
 }
 
 
+/* ========================= */
 /* CELULAR */
+/* ========================= */
 
 @media (max-width: 480px) {
 
@@ -392,7 +502,7 @@ button:hover {
     }
 
     h2 {
-        font-size: 21px;
+        font-size: 20px;
     }
 
     p {
@@ -403,8 +513,12 @@ button:hover {
         padding: 11px;
     }
 
-    .buttons {
+    .avaliacao {
         gap: 10px;
+    }
+
+    .avaliacao strong {
+        font-size: 12px;
     }
 
     button {
